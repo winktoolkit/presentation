@@ -1,0 +1,64 @@
+#container
+{
+	background-color: #666;
+	
+	position: relative;
+	
+	overflow: hidden;
+	width: 100%;
+}
+
+#pages
+{
+	width: 100%;
+}
+
+#wheel
+{
+	position: absolute;
+	
+	bottom: 80px;
+	right: 120px;
+	
+	z-index: 997;
+}
+
+#previous, #next
+{
+	position: absolute;
+	
+	left: 10px;
+	
+	width: 30px;
+}
+
+#previous
+{
+	top: 30px;
+}
+
+#next
+{
+	bottom: 30px;
+}
+
+.page
+{
+	position: relative;
+	
+	background: #fff;
+	
+	margin: auto;
+	
+	width: 90%;
+}
+
+.pageId
+{
+	position: absolute;
+	
+	color: #727780;
+	
+	bottom: 10px;
+	left: 15px;
+}

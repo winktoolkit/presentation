@@ -1,0 +1,377 @@
+/* page 0 */
+#page0 h1
+{
+	color: #0091ff;
+	
+	text-indent: 40px; 
+	
+	margin-top: 100px;
+	margin-bottom: 0;
+	
+	font-size: 27px;
+	font-weight: normal;
+}
+
+#page0 h2
+{
+	color: #4e535b;
+	
+	text-indent: 40px; 
+	
+	margin: 0;
+	
+	font-size: 25px;
+	font-weight: normal;
+}
+
+#page0 h3
+{
+	color: #727780;
+	
+	text-indent: 40px; 
+	
+	margin: 0;
+	
+	font-size: 17px;
+	font-weight: normal;
+}
+
+/* page 1 */
+#page1
+{
+	background-color: #000;
+	text-align: center;
+}
+
+/* page 2 */
+#page2 .face
+{
+	color: #000;
+	background-color: rgba(255, 255, 255, 1.0);
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.95);
+	width: 499px;
+	height: 499px;
+}
+
+#page2 #face1 
+{
+	background-color: rgba(200, 50, 50, 0.7);
+}
+
+#page2 #face2 
+{
+	background-color: rgba(47, 200, 183, 0.7);
+}
+
+#page2 #face3 
+{
+	background-color: rgba(50, 50, 250, 0.7);
+}
+
+#page2 #face4 
+{
+	background-color: rgba(100, 100, 100, 0.7);
+}
+
+#page2 #face5 
+{
+	background-color: rgba(66, 123, 90, 0.7);
+}
+
+#page2 #face6 
+{
+	background-color: rgba(210, 90, 20, 0.7);
+}
+
+#page2 h1
+{
+	position: absolute;
+	
+	color: #BDCBCA;
+	
+	right: 155px;
+	top: 80px;
+	
+	font-size: 27px;
+	font-weight: normal;
+}
+
+#page2 p
+{
+	position: absolute;
+	
+	border: 1px solid #666;
+	
+	padding: 20px;
+	
+	right: 150px;
+	top: 180px;
+}
+
+#page2 label
+{
+	margin-left: 10px;
+}
+
+#page2 input
+{
+	height: 30px;
+	width: 30px;
+}
+
+/* page 3 */
+#page3 #coverflow
+{
+	position: absolute;
+	
+	overflow: hidden;
+	
+	top: 200px;
+	left: 100px;
+	
+	width: 700px;
+}
+
+/* page 4 */
+#page4 #canvas
+{
+	position: absolute;
+	
+	top: 50px;
+	left: 50px;
+	
+	z-index: 995
+}
+
+#page4 h1
+{
+	position: absolute;
+	
+	color: #BDCBCA;
+	
+	right: 215px;
+	top: 75px;
+	
+	font-size: 27px;
+	font-weight: normal;
+	
+	text-align: center;
+}
+
+#page4 div
+{
+	position: absolute;
+	
+	right: 97px;
+	top: 340px;
+	
+	font-size: 27px;
+	font-weight: normal;
+}
+
+#page4 #like0
+{
+	width: 60px;
+}
+
+#page4 #like1
+{
+	width: 65px;
+}
+
+#page4 #like2
+{
+	width: 75px;
+}
+
+/* page 5 */
+#page5 #viewer
+{
+	position: relative;
+	
+	overflow: hidden;
+	
+	height: 420px;
+	width: 100%;
+}
+
+#page5 #plans
+{
+	position: relative;
+	
+	height: 100%;
+	width: 100%;
+	
+	-webkit-transform-style: preserve-3d;
+}
+
+#page5 #license
+{
+	position: absolute;
+	
+	bottom: 5px;
+	left: 0px;
+	
+	z-index: 999;
+}
+
+#page5 #compass
+{
+	background: url(../images/page6/compass.png);
+	
+	position: absolute;
+	
+	top: 10px;
+	right: 10px;
+	
+	width: 50px;
+	height: 50px;
+	
+	z-index: 999;
+}
+
+#page5 #needle
+{
+	background: url(../images/page6/needle.png);
+	
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+	
+	width: 50px;
+	height: 50px;
+	
+	-webkit-transform-origin: 50% 50%;
+}
+
+#page5 .arrow
+{
+	background: url(../images/page6/arrow.png);
+	border: 0;
+	
+	position: absolute;
+	
+	bottom: 30px;
+	left: 0;
+	
+	width: 44px;
+	height: 44px;
+	
+	z-index: 999;
+	
+	-webkit-transform-origin: 50% 100%;
+}
+
+#page5 .plan
+{
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	
+	z-index: 998;
+}
+
+/* page 6 */
+#page6 h1
+{
+	color: #0091ff;
+	
+	text-indent: 40px; 
+	
+	margin-top: 150px;
+	margin-bottom: 0;
+	
+	font-size: 27px;
+	font-weight: normal;
+}
+
+/* page 7 */
+#page7 .thumbs
+{
+	padding-top: 80px;
+	height: 60%;
+	width: 100%;
+	
+	text-align: center;
+}
+
+#page7 #arrow1, #page7 #concept, #page7 #arrow2, #page7 #portal
+{
+	opacity: 0;
+}
+
+#page7 .ap_progress
+{
+	width: 80%;
+	margin: auto;
+}
+
+#page7 .ap_cursor
+{
+	position: absolute;
+	
+	top: -15px;
+	left: -18px;
+}
+
+/* page8 */
+#page8 iframe
+{
+	-webkit-user-select: auto;
+	-webkit-touch-callout: inherit;
+}
+
+/* page9 */
+#page9 h2
+{
+	color: #4e535b;
+	
+	margin: 0;
+	
+	font-size: 25px;
+	font-weight: normal;
+}
+
+#page9 h3
+{
+	color: #727780;
+	
+	margin: 0;
+	
+	font-size: 17px;
+	font-weight: normal;
+}
+
+/* page10 */
+#page10 h2
+{
+	color: #4e535b;
+	
+	margin: 100px 0 0 0;
+	
+	font-size: 25px;
+	font-weight: normal;
+}
+
+#page10 a
+{
+	color: #0091ff;
+	text-decoration: none;
+	
+	font-size: 17px;
+	font-weight: normal;
+}
+
+/* page11 */
+#page11 h1
+{
+	color: #0091ff;
+	
+	margin: 0;
+	
+	font-size: 60px;
+	font-weight: normal;
+}

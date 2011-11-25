@@ -1,0 +1,28 @@
+.wh_container
+{
+	display: none;
+	position: absolute;
+	opacity: 0;
+	
+	width: 76px;
+	height: 270px;
+}
+
+.wh_petal
+{				
+	position: absolute;
+	
+	top: 0px;
+	left: 0px;
+	
+	opacity: 0.5;
+	
+	background: url(../images/petal.png) no-repeat center center;
+	width: 76px;
+	height: 88px;
+}
+
+.wh_petal.wh_selected
+{
+	opacity: 1;
+}

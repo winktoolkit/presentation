@@ -83,8 +83,10 @@ pr.page5 = (function()
 	page5.drawShape = function()
 	{
 		this._ctx.beginPath();
-		this._ctx.moveTo(this._previousPoint.x - (50 + ((pr._ww - pr._w)/2)), this._previousPoint.y - (50 + ((pr._wh - pr._h)/2)));
-		this._ctx.lineTo(this._currentPoint.x - (50 + ((pr._ww - pr._w)/2)), this._currentPoint.y - (50 + ((pr._wh - pr._h)/2)));
+		
+		this._ctx.moveTo(this._previousPoint.x - $('canvas').getLeftPosition(), this._previousPoint.y - (50 + ((pr._wh - pr._h)/2) + $('container').getTopPosition()));
+		this._ctx.lineTo(this._currentPoint.x - $('canvas').getLeftPosition(), this._currentPoint.y - (50 + ((pr._wh - pr._h)/2) + $('container').getTopPosition()));
+		
 		this._ctx.closePath();
 		this._ctx.stroke();
 	};

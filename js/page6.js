@@ -151,7 +151,7 @@ pr.page6 = (function()
 	 */
 	page6.getStructureFromPanoId = function(panoId)
 	{
-		this.addScriptTag('http://cbk0.google.com/cbk?output=json&callback=pr.page6.getPanoId&panoid=' + panoId);
+		pr.page6.addScriptTag('http://cbk0.google.com/cbk?output=json&callback=pr.page6.getPanoId&panoid=' + panoId);
 	};
 	
 	/**

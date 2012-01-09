@@ -1,0 +1,33 @@
+{
+	"build": {
+		"jsFile": "wink-VERSION-PROFILE-TARGET.js",
+		"cssFile": "wink-VERSION-PROFILE-TARGET.css",
+		"version": "1.4.1",
+		"defaultLocaleList": [ "en_EN" ]
+	},
+	"profiles": [
+		{
+			"name": "presentation",
+			"modules": [
+				// CORE
+				"core",
+				// FEATURE EXTENDED
+				"featapi", "featgraphic",
+				// FX
+				"3dfx", "animation",
+				// MATH
+				"geometric", "matrix",
+				// UX
+				"gesture", "gesturerecognizer", "movementtracker", "window",
+				// UI
+				"coverflow", "cube"
+			],
+			"css": [
+				"_themes/wink.css",
+				"_themes/default/css/wink.default.css",
+				"_themes/default/css/wink.default.buttons.css",
+				"_themes/default/css/wink.default.icons.css"
+			]
+		}
+	]
+}

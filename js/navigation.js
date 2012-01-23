@@ -17,6 +17,21 @@ pr.navigation = (function()
 		wink.ux.touch.addListener($('next'), 'end', { context: this, method: 'next', arguments: null }, { preventDefault: false });
 		wink.ux.touch.addListener($('previous'), 'end', { context: this, method: 'previous', arguments: null }, { preventDefault: false });
 		
+		// Handle key events to navigate
+		if ( !wink.ua.isMobile )
+		{
+			document.addEventListener('keyup', function(e)
+			{
+				if ( e.keyCode == '38' )
+				{
+					pr.navigation.previous();
+				} else if ( e.keyCode == '40' )
+				{
+					pr.navigation.next();
+				}
+			}, false);
+		}
+		
 		wink.fx.apply($('pages'), 
 		{
 			"transition-duration": '800ms',

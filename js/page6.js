@@ -30,7 +30,7 @@ pr.page6 = (function()
 	{
 		navigator.geolocation.getCurrentPosition(this.getStructureFromPosition, null, {highAccuracy: true});
 		
-		this.getStructureFromPanoId('xu8kGWH02W3N7aWBhCXLug');
+		this.getStructureFromPanoId('VxzhBNNu-VGQC8HtVIaY3A');
 		
 		wink.fx.initComposedTransform($('needle'));
 		wink.fx.setTransformPart($('needle'), 1, { type: "rotate", x: 0, y: 0, z: 1, angle: -45});
@@ -169,7 +169,7 @@ pr.page6 = (function()
 		} else
 		{
 			alert('no street view available for your current location, redirecting to default view');
-			this.getStructureFromPanoId('xu8kGWH02W3N7aWBhCXLug');
+			this.getStructureFromPanoId('VxzhBNNu-VGQC8HtVIaY3A');
 		}
 	};
 	

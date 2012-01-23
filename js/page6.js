@@ -36,11 +36,9 @@ pr.page6 = (function()
 		wink.fx.setTransformPart($('needle'), 1, { type: "rotate", x: 0, y: 0, z: 1, angle: -45});
 		wink.fx.applyComposedTransform($('needle'));
 		
-		wink.ux.touch.addListener($('container'), "start", { context: this, method: "touchStart", arguments: null }, { preventDefault: true });
-		wink.ux.touch.addListener($('container'), "move", { context: this, method: "touchMove", arguments: null }, { preventDefault: true });
-		wink.ux.touch.addListener($('container'), "end", { context: this, method: "touchEnd", arguments: null }, { preventDefault: true });
-
-		this.listenToOrientationChange();
+		wink.ux.touch.addListener($('viewer'), "start", { context: this, method: "touchStart", arguments: null }, { preventDefault: true });
+		wink.ux.touch.addListener($('viewer'), "move", { context: this, method: "touchMove", arguments: null }, { preventDefault: true });
+		wink.ux.touch.addListener($('viewer'), "end", { context: this, method: "touchEnd", arguments: null }, { preventDefault: true });
 	};
 	
 	/**
@@ -252,6 +250,14 @@ pr.page6 = (function()
 	page6.listenToOrientationChange = function()
 	{
 		window.addEventListener('deviceorientation', pr.page6.orientationChange, false);
+	};
+	
+	/**
+	 * 
+	 */
+	page6.unListenToOrientationChange = function()
+	{
+		window.removeEventListener('deviceorientation', pr.page6.orientationChange, false);
 	};
 	
 	/**

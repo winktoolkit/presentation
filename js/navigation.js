@@ -139,6 +139,14 @@ pr.navigation = (function()
 			}
 			
 			pr.currentPage = index;
+			
+			if ( index == 5 )
+			{
+				pr.page6.listenToOrientationChange();
+			} else
+			{
+				pr.page6.unListenToOrientationChange();
+			}
 		} else
 		{
 			$('pages').translate(0, -(index.selectedItem-1)*pr._wh);

@@ -301,9 +301,9 @@ wink.ui.xy.Wheel.prototype =
 	{
 		var _this = this;
 
-		wink.ux.touch.addListener($('wheel'), "start", { context: this, method: "_touchStart", arguments: null }, { tracking: false });
-		wink.ux.touch.addListener($('wheel'), "move", { context: this, method: "_touchMove", arguments: null });
-		wink.ux.touch.addListener($('wheel'), "end", { context: this, method: "_touchEnd", arguments: null });
+		wink.ux.touch.addListener(wink.byId('wheel'), "start", { context: this, method: "_touchStart", arguments: null }, { tracking: false });
+		wink.ux.touch.addListener(wink.byId('wheel'), "move", { context: this, method: "_touchMove", arguments: null });
+		wink.ux.touch.addListener(wink.byId('wheel'), "end", { context: this, method: "_touchEnd", arguments: null });
 		
 		wink.ux.touch.addListener(this._domNode, "gesturestart", { context: this, method: "_gestureStart", arguments: null}, { preventDefault: true });
 		wink.ux.touch.addListener(this._domNode, "gesturechange", { context: this, method: "_gestureChange", arguments: null}, { preventDefault: true });
@@ -385,7 +385,7 @@ wink.ui.xy.Wheel.Petal.prototype =
 	 */
 	setPosition: function(angle)
 	{
-		this._domNode.rotate(angle+this.position);
+		wink.fx.rotate(this._domNode, angle+this.position);
 		
 		var absAngle = Math.abs(angle+this.position);
 		var modulo = Math.floor(absAngle/360);

@@ -52,7 +52,7 @@ pr.page4 = (function()
 			borderSize: 2
 		});
 		
-		$('coverflow').appendChild(this.coverflow.getDomNode());
+		wink.byId('coverflow').appendChild(this.coverflow.getDomNode());
 	};
 	
 	return page4;

@@ -39,7 +39,7 @@ pr.page3 = (function()
 			rotationEndCallback: null
 		});
 		
-		$('cube').appendChild(this.cube.getDomNode());
+		wink.byId('cube').appendChild(this.cube.getDomNode());
 	};
 	
 	/**
@@ -50,28 +50,28 @@ pr.page3 = (function()
 		switch (e.target.value)
 		{
 			case '0':
-				$('face1').innerHTML = '';
-				$('face2').innerHTML = '';
-				$('face3').innerHTML = '';
-				$('face4').innerHTML = '';
-				$('face5').innerHTML = '';
-				$('face6').innerHTML = '';
+				wink.byId('face1').innerHTML = '';
+				wink.byId('face2').innerHTML = '';
+				wink.byId('face3').innerHTML = '';
+				wink.byId('face4').innerHTML = '';
+				wink.byId('face5').innerHTML = '';
+				wink.byId('face6').innerHTML = '';
 				break;
 			case '1':
-				$('face1').innerHTML = '<img src="./images/page3/cover1.jpg" style="width: 500px; opacity: 0.7" >';
-				$('face2').innerHTML = '<img src="./images/page3/cover2.jpg" style="width: 500px; opacity: 0.7" >';
-				$('face3').innerHTML = '<img src="./images/page3/cover3.jpg" style="width: 500px; opacity: 0.7" >';
-				$('face4').innerHTML = '<img src="./images/page3/cover4.jpg" style="width: 500px; opacity: 0.7" >';
-				$('face5').innerHTML = '<img src="./images/page3/cover5.jpg" style="width: 500px; opacity: 0.7" >';
-				$('face6').innerHTML = '<img src="./images/page3/cover6.jpg" style="width: 500px; opacity: 0.7" >';
+				wink.byId('face1').innerHTML = '<img src="./images/page3/cover1.jpg" style="width: 500px; opacity: 0.7" >';
+				wink.byId('face2').innerHTML = '<img src="./images/page3/cover2.jpg" style="width: 500px; opacity: 0.7" >';
+				wink.byId('face3').innerHTML = '<img src="./images/page3/cover3.jpg" style="width: 500px; opacity: 0.7" >';
+				wink.byId('face4').innerHTML = '<img src="./images/page3/cover4.jpg" style="width: 500px; opacity: 0.7" >';
+				wink.byId('face5').innerHTML = '<img src="./images/page3/cover5.jpg" style="width: 500px; opacity: 0.7" >';
+				wink.byId('face6').innerHTML = '<img src="./images/page3/cover6.jpg" style="width: 500px; opacity: 0.7" >';
 				break;
 			case '2':
-				$('face1').innerHTML = '<video src="./resources/bunny.m4v" width="100%" height="100%" poster="./images/page3/poster2.png" onclick="this.play();"></video>';
-				$('face2').innerHTML = '';
-				$('face3').innerHTML = '<video src="./resources/sintel.mp4 " width="100%" height="100%" poster="./images/page3/poster1.png" onclick="this.play();"></video>';
-				$('face4').innerHTML = '';
-				$('face5').innerHTML = '';
-				$('face6').innerHTML = '';
+				wink.byId('face1').innerHTML = '<video src="./resources/bunny.m4v" width="100%" height="100%" poster="./images/page3/poster2.png" onclick="this.play();"></video>';
+				wink.byId('face2').innerHTML = '';
+				wink.byId('face3').innerHTML = '<video src="./resources/sintel.mp4 " width="100%" height="100%" poster="./images/page3/poster1.png" onclick="this.play();"></video>';
+				wink.byId('face4').innerHTML = '';
+				wink.byId('face5').innerHTML = '';
+				wink.byId('face6').innerHTML = '';
 				break;
 		}
 	};

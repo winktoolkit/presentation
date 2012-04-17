@@ -14,8 +14,8 @@ pr.navigation = (function()
 	 */
 	navigation.init = function()
 	{
-		wink.ux.touch.addListener($('next'), 'end', { context: this, method: 'next', arguments: null }, { preventDefault: false });
-		wink.ux.touch.addListener($('previous'), 'end', { context: this, method: 'previous', arguments: null }, { preventDefault: false });
+		wink.ux.touch.addListener(wink.byId('next'), 'end', { context: this, method: 'next', arguments: null }, { preventDefault: false });
+		wink.ux.touch.addListener(wink.byId('previous'), 'end', { context: this, method: 'previous', arguments: null }, { preventDefault: false });
 		
 		// Handle key events to navigate
 		if ( !wink.ua.isMobile )
@@ -32,7 +32,7 @@ pr.navigation = (function()
 			}, false);
 		}
 		
-		wink.fx.apply($('pages'), 
+		wink.fx.apply(wink.byId('pages'), 
 		{
 			"transition-duration": '800ms',
 			"transition-timing-function": 'ease-out'
@@ -126,7 +126,7 @@ pr.navigation = (function()
 				return
 			}
 
-			$('pages').translate(0, -index*pr._wh);
+			wink.fx.translate(wink.byId('pages'), 0, -index*pr._wh);
 
 			if ( index > pr.currentPage )
 			{
@@ -149,7 +149,7 @@ pr.navigation = (function()
 			}
 		} else
 		{
-			$('pages').translate(0, -(index.selectedItem-1)*pr._wh);
+			wink.fx.translate(wink.byId('pages'), 0, -(index.selectedItem-1)*pr._wh);
 			pr.currentPage = index.selectedItem-1;
 		}
 	};

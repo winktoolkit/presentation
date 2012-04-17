@@ -32,13 +32,13 @@ pr.page6 = (function()
 		
 		this.getStructureFromPanoId('VxzhBNNu-VGQC8HtVIaY3A');
 		
-		wink.fx.initComposedTransform($('needle'));
-		wink.fx.setTransformPart($('needle'), 1, { type: "rotate", x: 0, y: 0, z: 1, angle: -45});
-		wink.fx.applyComposedTransform($('needle'));
+		wink.fx.initComposedTransform(wink.byId('needle'));
+		wink.fx.setTransformPart(wink.byId('needle'), 1, { type: "rotate", x: 0, y: 0, z: 1, angle: -45});
+		wink.fx.applyComposedTransform(wink.byId('needle'));
 		
-		wink.ux.touch.addListener($('viewer'), "start", { context: this, method: "touchStart", arguments: null }, { preventDefault: true });
-		wink.ux.touch.addListener($('viewer'), "move", { context: this, method: "touchMove", arguments: null }, { preventDefault: true });
-		wink.ux.touch.addListener($('viewer'), "end", { context: this, method: "touchEnd", arguments: null }, { preventDefault: true });
+		wink.ux.touch.addListener(wink.byId('viewer'), "start", { context: this, method: "touchStart", arguments: null }, { preventDefault: true });
+		wink.ux.touch.addListener(wink.byId('viewer'), "move", { context: this, method: "touchMove", arguments: null }, { preventDefault: true });
+		wink.ux.touch.addListener(wink.byId('viewer'), "end", { context: this, method: "touchEnd", arguments: null }, { preventDefault: true });
 	};
 	
 	/**
@@ -82,14 +82,14 @@ pr.page6 = (function()
 		var plan2 = plan1.cloneNode(true);
 		plan2.id = 'plan2';
 		
-		plan2.translate(-1430, 0);
+		wink.fx.translate(plan2, -1430, 0);
 		
 		var plan3 = plan1.cloneNode(true);
 		plan3.id = 'plan3';
 		
-		plan3.translate(1430, 0);
+		wink.fx.translate(plan3, 1430, 0);
 		
-		$('plans').innerHTML = "";
+		wink.byId('plans').innerHTML = "";
 		
 		if ( structure.Links )
 		{
@@ -104,7 +104,7 @@ pr.page6 = (function()
 				arrow1.value = structure.Links[i].panoId;
 				arrow1.src= 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 				
-				arrow1.translate(715 + (1430/360)*(yaw2-yaw1), 0);
+				wink.fx.translate(arrow1, 715 + (1430/360)*(yaw2-yaw1), 0);
 				
 				arrow1.onclick = function()
 				{
@@ -113,21 +113,21 @@ pr.page6 = (function()
 				
 				var arrow2 = arrow1.cloneNode(true);
 				arrow2.value = structure.Links[i].panoId;
-				arrow2.translate(715 + (1430/360)*(yaw2-yaw1)-1430, 0);
+				wink.fx.translate(arrow2, 715 + (1430/360)*(yaw2-yaw1)-1430, 0);
 				
 				arrow2.onclick = function()
 				{
 					pr.page6.getStructureFromPanoId(this.value);
 				};
 				
-				$('plans').appendChild(arrow1);
-				$('plans').appendChild(arrow2);
+				wink.byId('plans').appendChild(arrow1);
+				wink.byId('plans').appendChild(arrow2);
 			}
 		}
 		
-		$('plans').appendChild(plan1);
-		$('plans').appendChild(plan2);
-		$('plans').appendChild(plan3);
+		wink.byId('plans').appendChild(plan1);
+		wink.byId('plans').appendChild(plan2);
+		wink.byId('plans').appendChild(plan3);
 	};
 	
 	/**
@@ -298,11 +298,11 @@ pr.page6 = (function()
 	{
 		var distance = (1430/360) * angle;
 		
-		$('plans').translate(distance, 0);
+		wink.fx.translate(wink.byId('plans'), distance, 0);
 		
-		wink.fx.initComposedTransform($('needle'));
-		wink.fx.setTransformPart($('needle'), 1, { type: "rotate", x: 0, y: 0, z: 1, angle: -45-angle});
-		wink.fx.applyComposedTransform($('needle'));
+		wink.fx.initComposedTransform(wink.byId('needle'));
+		wink.fx.setTransformPart(wink.byId('needle'), 1, { type: "rotate", x: 0, y: 0, z: 1, angle: -45-angle});
+		wink.fx.applyComposedTransform(wink.byId('needle'));
 	};
 	
 	return page6;

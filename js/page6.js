@@ -28,7 +28,7 @@ pr.page6 = (function()
 	 */
 	page6.init = function()
 	{
-		navigator.geolocation.getCurrentPosition(this.getStructureFromPosition, null, {highAccuracy: true});
+		navigator.geolocation.getCurrentPosition(wink.bind(this.getStructureFromPosition, this), null, {highAccuracy: true});
 		
 		this.getStructureFromPanoId('VxzhBNNu-VGQC8HtVIaY3A');
 		
@@ -108,7 +108,7 @@ pr.page6 = (function()
 				
 				arrow1.onclick = function()
 				{
-					getStructureFromPanoId(this.value);
+					pr.page6.getStructureFromPanoId(this.value);
 				};
 				
 				var arrow2 = arrow1.cloneNode(true);

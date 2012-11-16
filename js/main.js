@@ -86,17 +86,24 @@ pr.main = (function()
 	{
 		if ( !wink.ua.isIPad )
 		{
-			pr._wh = 768;
+			pr._wh = 672;
 			pr._ww = 1024;
 			
-			pr._h = 691;
+			pr._h = 605;
 			pr._w = 921;
 			
 			wink.byId('container').style.height = pr._wh + 'px';
 			wink.byId('container').style.width = pr._ww + 'px';
 			
 			wink.byId('container').style.margin = 'auto';
-			wink.byId('container').style.top = (window.innerHeight - pr._wh)/2 + 'px';
+
+			if ( window.innerHeight < pr._wh )
+			{
+				wink.byId('container').style.top = '0';
+			} else
+			{
+				wink.byId('container').style.top = (window.innerHeight - pr._wh)/2 + 'px';
+			}
 		} else
 		{
 			pr._wh = window.innerHeight;
